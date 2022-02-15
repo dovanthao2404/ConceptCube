@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import { Routes, useLocation } from "react-router-dom";
+import { routers } from "./Components/Routers/router";
+import "./App.scss";
+import Navbar from "./Components/Common/Navbar";
+import React, { Fragment } from "react";
 function App() {
+
+  let location = useLocation();
+  const renderNavbar = () => {
+    const listBlock: String[] = [];
+    if (listBlock.includes(location.pathname)) {
+      return;
+    }
+    return <Navbar />;
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      {renderNavbar()}
+      <Routes>
+        {routers()}
+      </Routes>
+    </Fragment>
   );
 }
 
