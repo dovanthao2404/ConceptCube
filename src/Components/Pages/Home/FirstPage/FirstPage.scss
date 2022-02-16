@@ -1,0 +1,118 @@
+@import "Assets/Styles/index";
+
+.first-page {
+  .logo {
+    position: absolute;
+    top: 7.5%;
+    left: 7.5%;
+    visibility: hidden;
+    z-index: 1;
+    .logo-img {
+      user-select: none;
+    }
+  }
+  .img {
+    object-fit: cover;
+    user-select: none;
+  }
+  .img-1 {
+    position: absolute;
+    left: 0;
+    bottom: -27%;
+    height: 80.5%;
+    width: 10.9%;
+    @include responsive("medium-down") {
+      height: 34.5%;
+      width: 18%;
+      bottom: 0;
+    }
+  }
+  .img-2 {
+    position: absolute;
+    top: -30.2%;
+    left: 33.9%;
+    height: 77%;
+    width: 10.9%;
+    @include responsive("medium-down") {
+      // display: none;
+      height: 34.5%;
+      top: 0;
+      left: 40%;
+      width: 18%;
+    }
+  }
+  .img-3 {
+    position: absolute;
+    top: 14.3%;
+    right: 26.6%;
+    width: 10.9%;
+    height: 73.1%;
+    z-index: 2;
+    @include responsive("medium-down") {
+      height: 40.5%;
+      top: 45%;
+      width: 18%;
+    }
+  }
+  .img-4 {
+    position: absolute;
+    bottom: 0;
+    right: 17.8%;
+    width: 10.9%;
+    height: 73.1%;
+    z-index: 1;
+    @include responsive("medium-down") {
+      height: 50.5%;
+      width: 18%;
+    }
+  }
+  .img-5 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10.8%;
+    height: 54.7%;
+  }
+
+  .first-title {
+    @include styleText($fs-8, $fw-2, $color-green-0);
+    width: 67.4%;
+    position: absolute;
+    top: 16.6%;
+    left: 7.15%;
+    z-index: 1;
+    line-height: 1.1;
+    letter-spacing: -4px;
+    user-select: none;
+    z-index: 3;
+    visibility: hidden;
+    transform: translateY(0);
+    @include responsive("extra-large-max-down") {
+      font-size: $fs-10;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @include responsive("extra-large-down") {
+      font-size: $fs-7;
+    }
+    @include responsive("large-down") {
+      font-size: $fs-6;
+    }
+    @include responsive("small-down") {
+      font-size: $fs-11;
+    }
+    @include responsive("very-small-down") {
+      font-size: $fs-5;
+    }
+  }
+  .introduction {
+    position: absolute;
+    left: 7.6%;
+    bottom: 7.1%;
+    user-select: none;
+    @include styleText($fs-2, $fw-1, $color-green-0);
+    @include responsive("extra-large-max-down") {
+      font-size: $fs-12;
+    }
+  }
+}

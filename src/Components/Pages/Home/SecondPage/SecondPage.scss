@@ -1,0 +1,59 @@
+@import "Assets/Styles/index";
+
+.second-page {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  .creative {
+    position: absolute;
+    left: 1.7%;
+    top: -15%;
+    user-select: none;
+    width: 81.4%;
+    line-height: 0.87;
+    @include styleText($fs-9, $fw-2, $color-green-0);
+    @include responsive("large-down") {
+      font-size: $fs-8;
+      top: -5%;
+    }
+    @include responsive("small-down") {
+      font-size: $fs-13;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @include responsive("very-small-down") {
+      top: -5%;
+      transform: translateY(0%);
+    }
+  }
+  .slider-page-two {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    div {
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+    }
+    .item-slide {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        display: block;
+        width: 526px;
+        @include responsive("large-down") {
+          width: 320px;
+        }
+        @include responsive("small-down") {
+          width: 240px;
+        }
+        @include responsive("very-small-down") {
+          width: 200px;
+        }
+      }
+    }
+  }
+}

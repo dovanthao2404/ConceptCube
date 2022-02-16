@@ -20,6 +20,7 @@ $fs-9: 281px;
 $fs-10: 150px;
 $fs-11: 52px;
 $fs-12: 12px;
+$fs-13: 140px;
 
 //font weight
 $fw-0: 300;
@@ -34,9 +35,11 @@ $breakpoints: (
   "large": 992px,
   "medium": 768px,
   "small": 576px,
+  "very-small": 375px,
   "extra-large-max-down": 1599.98px,
   "extra-large-down": 1199.98px,
   "large-down": 991.98px,
   "medium-down": 767.98px,
   "small-down": 575.98px,
+  "very-small-down": 374.98px,
 );
