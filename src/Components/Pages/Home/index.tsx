@@ -10,8 +10,8 @@ const Home: React.FC = () => {
     return <ReactFullpage
         licenseKey={'263DXXXX-B839XXXX-AE67XXXX-F398XXXX'}
         // {...fullpageOptions}
-        // navigation={true}
-        // navigationPosition={'right'}
+        navigation={true}
+        navigationPosition={'right'}
         // onLeave={onLeave}
         // afterLoad={afterLoad}
         scrollingSpeed={600}

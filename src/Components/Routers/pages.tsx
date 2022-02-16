@@ -2,8 +2,12 @@ import Contact from "../Pages/Contact";
 import Home from "../Pages/Home";
 import { RoutesString } from "./routerStrings";
 
+export interface pagesInterface {
+    path: string,
+    component: React.FC;
+}
 
-const pages = [
+const pages: pagesInterface[] = [
     {
         path: RoutesString.Home,
         component: Home,
@@ -11,7 +15,6 @@ const pages = [
     {
         path: RoutesString.Contact,
         component: Contact,
-
     }
 ];
 

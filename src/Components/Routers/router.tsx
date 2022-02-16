@@ -1,9 +1,9 @@
 import { Route } from "react-router-dom";
-import pages from "./pages";
+import pages, { pagesInterface } from "./pages";
 
 
 export const routers = () => {
-    return pages.map((item, key) => {
+    return pages.map((item: pagesInterface, key: number) => {
         return <Route key={key} path={item.path} element={<item.component />} />;
     });
 };
