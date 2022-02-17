@@ -9,11 +9,12 @@
     left: 1.7%;
     top: -15%;
     user-select: none;
-    width: 81.4%;
+    width: 1562px;
     line-height: 0.87;
     @include styleText($fs-9, $fw-2, $color-green-0);
     @include responsive("large-down") {
       font-size: $fs-8;
+      width: 81.4%;
       top: -5%;
     }
     @include responsive("small-down") {

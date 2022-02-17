@@ -1,3 +1,171 @@
 {
+    "navbar": {
+        "address": "411-A, IT-belly, 40, Imi-ro, Uiwang-si, Gyeonggi-do, Republic of Korea"
+    },
+    "home": {
+        "onePage": {
+            "desc": "Maxius is a company that develops its own system semiconductors and manufactures and sells computers for high-performance servers. We supply equipment and solutions to clients in various cutting edge fields.",
+            "text_bottom": "Together, we will be the best in value and speed."
+        },
+        "twoPage": {
+            "desc": "1. Self - produced device manufacturer. 2. Production and Sales of High-Performance Servers with self - manufactured system device. 3.Construction of operative Block chain IDC based on HPS. 4. Establish solu-tion relating to Blockchain IPFS"
+        },
+        "thirdPage": {
+            "product": {
+                "text": "Maxius is the only self-developed semiconductor company who builds servers with high technology. As we provides solutions specialized for intelligent data centers and the IT industry, we will develop into a growing company in global market."
+            },
+            "technology": {
+                "text": "Maxius is the only self-developed semiconductor company who builds servers with high technology. As we provides solutions specialized for intelligent data centers and the IT industry, we will develop into a growing company in global market."
+            },
+            "application": {
+                "text": "Maxius is the only self-developed semiconductor company who builds servers with high technology. As we provides solutions specialized for intelligent data centers and the IT industry, we will develop into a growing company in global market."
+            },
+            "blockchain": {
+                "text": ""
+            }
+        },
+        "fourth": {
+            "history": [
+                {
+                    "id": 0,
+                    "year": "History",
+                    "childrenYears": [
+                        {
+                            "id": 0,
+                            "title": "2021",
+                            "type": "Changed the company name to Maxius"
+                        },
+                        {
+                            "id": 1,
+                            "title": "2020",
+                            "type": "Second construction of an artificial intelligence-based adaptive security system"
+                        },
+                        {
+                            "id": 2,
+                            "title": "2019",
+                            "type": "Development of Genome Analysis System <br/> Semiconductor and High Performance Storage"
+                        },
+                        {
+                            "id": 3,
+                            "title": "2018",
+                            "type": "고성능 시스템 반도체를 이용한 소형슈퍼컴퓨터 개발 <br/> 국제공인 TPC 인증"
+                        },
+                        {
+                            "id": 4,
+                            "title": "2017",
+                            "type": "대기전력 저감 우수제품 확인(한국에너지공단) <br/> 기술혁신대상"
+                        },
+                        {
+                            "id": 5,
+                            "title": "2016",
+                            "type": "방송통신기자재등의 적합등록 필증 획득(국립전파연구원) <br/> (주)KT ds MOU 체결"
+                        },
+                        {
+                            "id": 6,
+                            "title": "2015",
+                            "type": "IT 융합기업인상 수상(산업통상자원부) <br/> 한국특허기술상 대상(세종대왕상) 수상"
+                        },
+                        {
+                            "id": 7,
+                            "title": "2010",
+                            "type": "국내 최초 PCI Interface Type의 Storage Board SSD <br/> 제품 상용화 개발 성공"
+                        },
+                        {
+                            "id": 8,
+                            "title": "1996",
+                            "type": "회사 설립"
+                        }
+                    ]
+                },
+                {
+                    "id": 1,
+                    "year": "Partners",
+                    "childrenYears": [
+                        {
+                            "id": 0,
+                            "title": "1000개 기업 파트너 체결",
+                            "type": "정부"
+                        },
+                        {
+                            "id": 1,
+                            "title": "165 additional corporate partners",
+                            "type": "National defense"
+                        },
+                        {
+                            "id": 2,
+                            "title": "250개 기업 파트너 추가 체결",
+                            "type": "시, 도, 현, 구"
+                        },
+                        {
+                            "id": 3,
+                            "title": "120 corporate partners",
+                            "type": "Corporation"
+                        },
+                        {
+                            "id": 4,
+                            "title": "350 additional corporate partners",
+                            "type": "General public"
+                        },
+                        {
+                            "id": 5,
+                            "title": "50개 기업 파트너 추가 체결",
+                            "type": "금융, 통신"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "year": "Patent",
+                    "childrenYears": [
+                        {
+                            "id": 0,
+                            "title": "Patent for security system",
+                            "type": "First establishment of an artificial intelligence-based adaptive security system"
+                        },
+                        {
+                            "id": 1,
+                            "title": "Patent for system semiconductor",
+                            "type": "Development of small computers using high-performance system semiconductors"
+                        },
+                        {
+                            "id": 2,
+                            "title": "Patent certified by TPC",
+                            "type": "International TPC certification"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "year": "Awards",
+                    "childrenYears": [
+                        {
+                            "id": 0,
+                            "title": "KR Sejong the Great Award",
+                            "type": "The best performance and energy-saving technology"
+                        },
+                        {
+                            "id": 1,
+                            "title": "KR Excellent Product Certificate",
+                            "type": "Certification of excellent products in the field of high-performance system quality servers"
+                        },
+                        {
+                            "id": 2,
+                            "title": "KR Green Technology Certificate",
+                            "type": "Environmentally friendly with highest perfor-mance and maximum efficiency"
+                        },
+                        {
+                            "id": 3,
+                            "title": "대한민국 TPC-C 인증",
+                            "type": "국내 최초 국제 공인 TPC-C인증 받아 인메모리 DB를 <br/>   탑재한 인공지능 고성능 컴퓨팅 기술과 성능을 인정"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "contact": {
+        "address": "411-A, IT-belly, 40, Imi-ro, Uiwang-si,",
+        "district": "Gyeonggi-do, Republic of Korea"
+    },
     "name": "name"
 }

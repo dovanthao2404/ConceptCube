@@ -1,0 +1,133 @@
+@import "Assets/Styles/_index.scss";
+.third-page {
+  .container {
+    max-width: 1580px;
+    width: 100%;
+    margin: 0 auto;
+    @media screen and (max-width: 1699.98px) {
+      max-width: 80%;
+    }
+
+    .third-page-slider {
+      .slick-list {
+        overflow: unset;
+      }
+
+      .card {
+        background-color: $color-blue-3;
+        transition: all 0.3s;
+        height: 100%;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+        .card-content {
+          h1 {
+            @include styleText($fs-5, $fw-2, $color-blue-2);
+            transition: all 0.3s;
+            user-select: none;
+            line-height: 1;
+
+            padding-left: 20px;
+            padding-top: 42px;
+            @include responsive("small-down") {
+              font-size: $fs-4;
+            }
+          }
+        }
+
+        .card-bottom {
+          padding-left: 20px;
+          padding-bottom: 68px;
+          padding-top: 22px;
+          padding-right: 70px;
+          h3 {
+            display: none;
+            @include styleText($fs-3, $fw-2, $color-green-2);
+            user-select: none;
+            @include responsive("small-down") {
+              color: $color-blue-2;
+              display: block;
+            }
+          }
+          p {
+            @include styleText($fs-3, $fw-0, $color-blue-2);
+            transition: all 0.3s;
+            font-family: NotoSansCJKkr;
+            line-height: 1.93;
+            user-select: none;
+          }
+          @include responsive("small-down") {
+            padding-right: 30px;
+            padding-bottom: 20px;
+            padding-top: 10px;
+            p {
+              font-size: $fs-1;
+            }
+            h3 {
+            }
+            p {
+            }
+          }
+        }
+        &.active {
+          background-color: $color-blue-4;
+          .card-content {
+            h1 {
+              color: $color-green-2;
+            }
+            .card-bottom {
+              h3 {
+                display: block;
+                color: $color-green-2;
+              }
+              p {
+                color: $color-green-2;
+              }
+            }
+          }
+        }
+      }
+      .card-0 {
+        margin-right: 15px;
+        .card-content {
+          h1 {
+            padding-bottom: 20px;
+          }
+          .card-bottom {
+            padding-top: 50px;
+            @include responsive("small-down") {
+              padding-top: 30px;
+            }
+          }
+        }
+      }
+      .card-1 {
+        margin-left: 5px;
+        margin-right: 10px;
+        .card-content {
+          h1 {
+            padding-bottom: 26px;
+          }
+        }
+      }
+      .card-2 {
+        margin-right: 5px;
+        margin-left: 10px;
+        .card-content {
+          h1 {
+            padding-bottom: 26px;
+          }
+        }
+      }
+      .card-3 {
+        margin-left: 15px;
+        .card-content {
+          h1 {
+            padding-bottom: 26px;
+          }
+        }
+      }
+    }
+  }
+}

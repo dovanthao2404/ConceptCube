@@ -1,0 +1,70 @@
+@import "Assets/Styles/_index.scss";
+.four-section {
+  background-color: $color-green-0;
+  height: 100%;
+  .container {
+    height: 100%;
+    width: 70%;
+    margin: auto;
+    .box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      & > .title {
+        @include styleText($fs-6, $fw-4, $color-blue-0);
+        padding-bottom: 40px;
+        text-align: center;
+        visibility: hidden;
+        @include responsive("medium-down") {
+          font-size: $fs-11;
+        }
+      }
+      .list-history {
+        visibility: hidden;
+      }
+      .history-item {
+        .title {
+          @include styleText($fs-5, $fw-4, $color-blue-0);
+          @include responsive("medium-down") {
+            font-size: $fs-14;
+          }
+        }
+        .item-history-list {
+          margin-top: 24px;
+          height: 250px;
+          overflow-y: auto;
+          width: 95%;
+
+          &::-webkit-scrollbar {
+            width: 1.5px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background: $color-blue-3;
+          }
+
+          &::-webkit-scrollbar {
+            width: 1px;
+          }
+          &::-webkit-scrollbar-track {
+            background: #8375a3;
+          }
+          .item {
+            // min-height: 80px;
+            width: 90%;
+            margin-right: 5%;
+            margin-top: 30px;
+            .text {
+              @include styleText($fs-2, $fw-2, $color-blue-0);
+              font-family: Montserrat-medium;
+            }
+            .type {
+              @include styleText($fs-2, $fw-1, $color-blue-0);
+            }
+          }
+        }
+      }
+    }
+  }
+}

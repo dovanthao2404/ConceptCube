@@ -13,6 +13,7 @@ const SecondPage: React.FC = () => {
         slidesToShow: 1,
         autoplay: true,
         pauseOnHover: false,
+        arrows: false
 
     };
     const renderSlider = () => {

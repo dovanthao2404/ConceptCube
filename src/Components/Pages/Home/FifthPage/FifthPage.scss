@@ -1,0 +1,101 @@
+@import "Assets/Styles/_index.scss";
+
+.fifth-page {
+  background: url("../../../../Assets/Images/05-bg.png");
+  height: 100%;
+  background-size: cover;
+  position: relative;
+  .fifth-list {
+    position: absolute;
+    top: 12.5%;
+    left: 7.3%;
+    z-index: 1;
+    visibility: hidden;
+    .fifth-item {
+      margin-bottom: 65px;
+      visibility: hidden;
+      @include responsive("extra-large-down") {
+        margin-bottom: 40px;
+      }
+      @include responsive("medium-down") {
+        margin-bottom: 10px;
+      }
+      h2 {
+        user-select: none;
+        @include styleText($fs-14, $fw-3, $color-white-0);
+        @include responsive("medium-down") {
+          font-size: $fs-4;
+        }
+      }
+      .learn-more p,
+      a {
+        @include styleText($fs-2, $fw-0, $color-white-0);
+        padding: 4px 10px;
+        width: 300px;
+        margin-top: 10px;
+        user-select: none;
+        @include responsive("extra-large-down") {
+          margin-top: 6px;
+        }
+        @include responsive("medium-down") {
+          width: 200px;
+          font-size: $fs-1;
+          margin-left: -10px;
+          margin-top: 0;
+        }
+      }
+      a {
+        text-decoration: none;
+        display: flex;
+        justify-content: space-between;
+        .icon {
+          display: none;
+          font-size: $fs-1;
+        }
+        &:hover {
+          background-color: $color-white-0;
+          color: $color-blue-3;
+          .icon {
+            display: block;
+          }
+        }
+      }
+      .learn-more {
+        p {
+          cursor: pointer;
+          &:hover {
+            background-color: $color-white-0;
+            color: $color-blue-3;
+            .icon {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  .fifth-text {
+    position: absolute;
+    top: 40%;
+    left: 40.5%;
+    user-select: none;
+    visibility: hidden;
+    max-width: 900px;
+    @include styleText($fs-7, $fw-2, $color-green-1);
+    @include responsive("extra-large-down") {
+      font-size: $fs-6;
+    }
+    @include responsive("medium-down") {
+      height: 100%;
+      top: 0;
+      left: 20%;
+      display: flex;
+      align-items: center;
+      max-width: 300px;
+      font-size: $fs-5;
+    }
+    @include responsive("very-small-down") {
+      top: 10%;
+    }
+  }
+}

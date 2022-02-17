@@ -5,7 +5,6 @@
     position: absolute;
     top: 7.5%;
     left: 7.5%;
-    visibility: hidden;
     z-index: 1;
     .logo-img {
       user-select: none;
@@ -34,7 +33,6 @@
     height: 77%;
     width: 10.9%;
     @include responsive("medium-down") {
-      // display: none;
       height: 34.5%;
       top: 0;
       left: 40%;
@@ -85,12 +83,15 @@
     letter-spacing: -4px;
     user-select: none;
     z-index: 3;
-    visibility: hidden;
     transform: translateY(0);
     @include responsive("extra-large-max-down") {
       font-size: $fs-10;
-      top: 50%;
-      transform: translateY(-50%);
+      justify-content: center;
+
+      height: 100%;
+      display: flex;
+      top: 0;
+      flex-direction: column;
     }
     @include responsive("extra-large-down") {
       font-size: $fs-7;

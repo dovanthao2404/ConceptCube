@@ -10,41 +10,31 @@ import { afterLoad } from "./Animation/afterLoad";
 import { onLeave } from "./Animation/onLeave";
 
 import { gsap } from "gsap";
+import { useNavigate } from "react-router-dom";
+
+const fullpageOptions = {
+    anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage", "fivePage"],
+
+};
 const Home: React.FC = () => {
+    const navigate = useNavigate();
+    useEffect(() => {
 
-    // useEffect(() => {
-    //     const timer = setTimeout(() => {
-    //         const TL = gsap.timeline({
-    //             repeat: -1,
-    //         });
+        navigate("/");
 
-    //         TL
-    //             .from(".slider img", {
-    //                 x: 700,
-    //                 autoAlpha: 0,
-    //                 duration: 0.75,
-    //                 stagger: 3
-    //             })
-    //             .from(".slider img", {
-    //                 autoAlpha: 0,
-    //                 x: -700,
-    //                 duration: 0.75,
-    //                 stagger: 3
-    //             }, 3);
-    //     }, 3000);
-    //     return () => clearTimeout(timer);
-    // }, []);
+    }, []);
+
 
 
     return <ReactFullpage
         licenseKey={'263DXXXX-B839XXXX-AE67XXXX-F398XXXX'}
-        // {...fullpageOptions}
+        {...fullpageOptions}
         navigation={true}
         navigationPosition={'right'}
         onLeave={onLeave}
         afterLoad={afterLoad}
         scrollingSpeed={600}
-        // normalScrollElements={'.item-history, #menu,list-menu-sidebar'}
+        normalScrollElements={'.item-history-list, #menu,list-menu-sidebar'}
         render={() => {
 
             return <div className="home">

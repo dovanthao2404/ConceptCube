@@ -9,3 +9,36 @@
 body {
   font-family: Montserrat;
 }
+
+#fp-nav.fp-right {
+  right: 3.1%;
+  ul > li {
+    margin: 8px 0;
+    a,
+    a.active {
+      span {
+        width: 8px;
+        height: 8px;
+        border-radius: 0;
+        background-color: $color-white-0;
+      }
+    }
+    a.active {
+      span {
+        background-color: $color-blue-0;
+        margin: -2px 0 0 -2px;
+      }
+    }
+    &:hover {
+      a,
+      a.active {
+        span {
+          border-radius: 0 !important;
+          margin: -2px 0 0 -2px;
+          width: 8px;
+          height: 8px;
+        }
+      }
+    }
+  }
+}

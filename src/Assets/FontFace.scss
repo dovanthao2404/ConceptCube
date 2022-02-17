@@ -1,5 +1,13 @@
 // Montserrat
 
+// Montserrat
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 300;
+  src: url("./Fonts/Montserrat/Montserrat-Light.ttf");
+}
+
 @font-face {
   font-family: "Montserrat";
   font-weight: 500;
@@ -7,9 +15,20 @@
 }
 
 @font-face {
+  font-family: "Montserrat-medium";
+  font-weight: 100;
+  src: url("./Fonts/Montserrat/Montserrat-Medium.ttf");
+}
+
+@font-face {
   font-family: "Montserrat";
   src: url("./Fonts/Montserrat/Montserrat-SemiBold.ttf");
   font-weight: 600;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./Fonts/Montserrat/Montserrat-Bold.ttf");
+  font-weight: 700;
 }
 
 @font-face {
@@ -21,5 +40,6 @@
 // NotoSansCJKkr
 @font-face {
   font-family: "NotoSansCJKkr";
+  font-weight: 300;
   src: url("./Fonts/NotoSansCJKkr/NotoSansCJKkr-Light.woff") format("woff");
 }
