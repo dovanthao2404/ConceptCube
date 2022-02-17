@@ -41,6 +41,13 @@
           padding-bottom: 68px;
           padding-top: 22px;
           padding-right: 70px;
+          &.en {
+            padding-right: 37px;
+            &.card-bottom-3 {
+              padding-bottom: 40px;
+            }
+          }
+
           h3 {
             display: none;
             @include styleText($fs-3, $fw-2, $color-green-2);
@@ -56,6 +63,7 @@
             font-family: NotoSansCJKkr;
             line-height: 1.93;
             user-select: none;
+            margin-top: 4px;
           }
           @include responsive("small-down") {
             padding-right: 30px;

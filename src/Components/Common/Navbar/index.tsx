@@ -14,16 +14,6 @@ const Navbar: React.FC = () => {
     const navBarContent = useRef<any>();
     const switchRef = useRef<any>();
 
-
-    useEffect(() => {
-
-        if (pathname === "/contact") {
-            gsap.to(" .box-toggle .icon div", { background: "#222" });
-            gsap.to(" .switch-language.top p:not(.active)", { color: "#222" });
-
-        }
-    }, []);
-
     const handleOpenNavbar = (e: any) => {
         if (btnToggleRef.current && navBarContent.current) {
             btnToggleRef.current.classList.toggle("open");
@@ -78,7 +68,7 @@ const Navbar: React.FC = () => {
         <div className="nav-bar">
             <nav role="navigation">
                 <div className="box-toggle">
-                    <div ref={btnToggleRef} className="icon" onClick={handleOpenNavbar}>
+                    <div ref={btnToggleRef} className="icon top" onClick={handleOpenNavbar}>
                         <div></div>
                         <div></div>
                         <div></div>
@@ -152,9 +142,9 @@ const Navbar: React.FC = () => {
                     <div className="info">
                         <div className="infoWrapper">
                             <p className="address">
-                                서울특별시 강남구 도산대로 8길 17-10 이리스빌딩 1F
+                                {t("navbarAddress")}
                                 <br />
-                                Tel 02. 543. 4983 / Fax 02. 6280. 4079
+                                 T 02 543 4983
                             </p>
                             <p className="link">
                                 <a

@@ -1,9 +1,9 @@
 import React from 'react';
 import "./FourthPage.scss";
 import Slider from "react-slick";
-import dataKo from "./dataKo.json";
+import { useTranslation } from 'react-i18next';
 const FourthPage: React.FC = () => {
-
+    const { t } = useTranslation();
     const settings = {
         dots: false,
         infinite: false,
@@ -47,6 +47,29 @@ const FourthPage: React.FC = () => {
         ],
     };
 
+    const renderSlideItem = () => {
+
+        const data = t("fourPage", { returnObjects: true }) as any;
+        return data?.map((item: any, key: number) => {
+            return <div key={key} className="history-item">
+                <div className="title">
+                    {item.title}
+                </div>
+                <div className='item-history-list'>
+                    {
+                        item.listItem.map((item: any, key: number) => {
+                            return <div key={key} className='item'>
+                                <p className='text'>{item.text} </p>
+                                <p className='type'>{item.type}</p>
+                            </div>;
+                        })
+                    }
+
+                </div>
+            </div>;
+        });
+    };
+
     return (
         <section className="section">
             <div className="fourth-page  four-section">
@@ -58,24 +81,7 @@ const FourthPage: React.FC = () => {
                         <div className='list-history'>
 
                             <Slider {...settings}>
-                                {dataKo?.map((item, key) => {
-                                    return <div key={key} className="history-item">
-                                        <div className="title">
-                                            {item.title}
-                                        </div>
-                                        <div className='item-history-list'>
-                                            {
-                                                item.listItem.map((item, key) => {
-                                                    return <div key={key} className='item'>
-                                                        <p className='text'>{item.text} </p>
-                                                        <p className='type'>{item.type}</p>
-                                                    </div>;
-                                                })
-                                            }
-
-                                        </div>
-                                    </div>;
-                                })}
+                                {renderSlideItem()}
 
                             </Slider>
                         </div>

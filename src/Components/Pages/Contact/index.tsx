@@ -3,10 +3,10 @@ import { useTranslation } from "react-i18next";
 import "./style.scss";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 const Contact: React.FC = () => {
-
+    const { pathname } = useLocation();
     const nv = useNavigate();
     useEffect(() => {
 
@@ -38,11 +38,23 @@ const Contact: React.FC = () => {
     }, []);
     const { t } = useTranslation();
 
-    const renderTextContact = (type: string) => {
-        const data = t("contact", { returnObjects: true }) as any;
-        return <>{data[type]}</>;
-    }
-        ;
+
+    useEffect(() => {
+
+        const navbarEle = document.querySelector(".nav-bar .switch-language.top") as any;
+
+        const btnToggleEl = document.querySelector(".nav-bar .icon.top") as any;
+
+        navbarEle.classList.add("contact");
+        btnToggleEl.classList.add("contact");
+        return () => {
+            navbarEle.classList.remove("contact");
+            btnToggleEl.classList.remove("contact");
+
+        };
+    }, []);
+
+
 
     return <div className="contact-container">
         <div className="contact-content">
@@ -54,7 +66,7 @@ const Contact: React.FC = () => {
             </header>
             <div className="box-map">
                 <div className="map-child">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12678.116361691282!2d126.9906355!3d37.4009674!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4b39f590f50cd704!2z7J24642V7JuQSVTrsLjrpqw!5e0!3m2!1sko!2s!4v1644486182826!5m2!1sko!2s" style={{
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.6611743669755!2d127.0209823151663!3d37.51590877980742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3e9253866e9%3A0xc7c3669311c4500c!2z7ISc7Jq47Yq567OE7IucIOqwleuCqOq1rCDrhbztmITrj5kg64-E7IKw64yA66GcOOq4uCAxNy0xMCAxRg!5e0!3m2!1sko!2skr!4v1574831755695!5m2!1sko!2skr" style={{
                         border: 0
                     }} loading="lazy" title="map"></iframe>
 
@@ -62,14 +74,14 @@ const Contact: React.FC = () => {
                 <div className="map-child info-wrapper">
                     <div className="info">
                         <div className="top">
-                            <p>{renderTextContact("address")}</p>
-                            <p>{renderTextContact("district")}</p>
-                            <p> Tel 02. 851. 2662</p> <p> Fax 02. 851. 2662</p>
+                            <p>{t("district")}</p>
+                            <p>{t("address")}</p>
+                            <p> T 02 543 4983</p>
                         </div>
                         <div className="bottom">
                             <div className="contact-title-1">
                                 <div className="title ">Company</div>
-                                <a href="mailto:looc.tzlee@gmail.com" title="">support@taejin.co.kr</a>
+                                <a href="mailto:looc.tzlee@gmail.com" title="">looc.tzlee@gmail.com</a>
                             </div>
 
                             <div className="hidden"></div>

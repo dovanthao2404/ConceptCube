@@ -21,6 +21,13 @@
       margin-bottom: 5px;
       .icon {
         cursor: pointer;
+        &.top {
+          &.contact {
+            div {
+              background-color: $color-blue-3;
+            }
+          }
+        }
         div {
           display: block;
           width: 40px;
@@ -43,7 +50,7 @@
             height: 1px;
             opacity: 1;
             transform: rotate(45deg) translate(1px, -6px);
-            background: #fff !important;
+            background: $color-white-0 !important;
 
             &:nth-child(2) {
               opacity: 0;
@@ -64,12 +71,23 @@
       &.open {
         opacity: 0;
       }
+      &.top {
+        &.contact {
+          p {
+            color: $color-blue-4;
+            &.active {
+              color: $color-green-2;
+            }
+          }
+        }
+      }
       p {
         cursor: pointer;
         user-select: none;
         margin-left: 8px;
         text-align: right;
         @include styleText($fs-4, $fw-1, $color-white-0);
+        transition: all 0.3s;
         &.active {
           color: $color-green-2;
         }
@@ -82,7 +100,7 @@
     top: 0;
     right: 0;
     background-color: $color-blue-1;
-    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.3);
+
     height: 100vh;
     width: 532px;
     transform: translateX(532px);
@@ -111,6 +129,7 @@
     transition: all 0.3s;
     &.open {
       transform: translateX(0);
+      box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.3);
     }
     nav {
       .box-toggle {
@@ -159,7 +178,7 @@
         width: 100%;
         .infoWrapper {
           width: 100%;
-          border-top: 2px solid #fff;
+          border-top: 2px solid $color-white-0;
           width: 100%;
           .address {
             padding-top: 50px;

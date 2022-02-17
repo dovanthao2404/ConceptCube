@@ -1,21 +1,27 @@
 @import "Assets/Styles/_index.scss";
+$local-extra-large: 1311px;
+$local-large-down: 840px;
+$local-small-down-0: 480px;
+$local-small-down-1: 414px;
+$local-very-small-down: 375px;
+
 .contact-container {
   height: 100vh;
   .contact-content {
     height: 100%;
-    @media screen and (max-width: 840px) {
+    @media screen and (max-width: $local-large-down) {
       height: 80%;
       overflow: auto;
       position: relative;
       top: 150px;
     }
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: $local-small-down-1) {
       height: 80%;
       overflow: auto;
       position: relative;
       top: 122px;
     }
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: $local-very-small-down) {
       height: 80%;
       overflow: auto;
       position: relative;
@@ -28,14 +34,14 @@
         margin-bottom: 10px;
         font-size: 40px;
         font-weight: 700;
-        color: #000;
+        color: $color-blue-3;
         position: relative;
         text-align: center;
         padding: 60px 0;
         user-select: none;
         cursor: text;
         visibility: hidden;
-        @media (max-width: 480px) {
+        @media (max-width: $local-small-down-0) {
           padding: 30px 0;
           font-size: 30px;
         }
@@ -44,13 +50,13 @@
     .box-map {
       height: 82%;
       display: flex;
-      @media screen and (max-width: 840px) {
+      @media screen and (max-width: $local-large-down) {
         display: block;
       }
     }
     .map-child {
       width: 50%;
-      @media screen and (max-width: 840px) {
+      @media screen and (max-width: $local-large-down) {
         width: 100%;
       }
       iframe,
@@ -59,7 +65,7 @@
         height: 100%;
       }
       .info {
-        background: #663cc5;
+        background: $color-blue-1;
         display: flex;
         box-sizing: border-box;
         flex-direction: column;
@@ -67,24 +73,24 @@
         justify-content: space-between;
 
         .top {
-          font-size: 16px;
           line-height: 1.6;
           color: $color-white-0;
           padding: 12.8%;
-          @media (max-width: 1311px) {
+          @media (max-width: $local-extra-large) {
             padding-top: 18.8%;
             padding-left: 18.8%;
           }
           p {
             user-select: none;
             cursor: text;
-            font-weight: 300;
-            font-size: 14px;
+            font-weight: 500;
+            font-size: $fs-3;
+
           }
         }
         .bottom {
           padding: 12.8%;
-          @media (max-width: 1311px) {
+          @media (max-width: $local-extra-large) {
             padding-bottom: 18.8%;
             padding-right: 18.8%;
           }
@@ -93,7 +99,7 @@
           .title {
             user-select: none;
             cursor: text;
-            font-size: 12px !important;
+            font-size: $fs-18 !important;
             font-weight: 100;
           }
           .hidden {
@@ -103,7 +109,7 @@
           }
 
           a {
-            font-size: 14px;
+            font-size: $fs-3;
             user-select: none;
             font-weight: 300;
             text-decoration: none;

@@ -1,0 +1,125 @@
+@import "Assets/Styles/_index.scss";
+$fs-local-1: 80px;
+$fs-local-2: 40px;
+$fs-local-3: 24px;
+$fs-local-4: 12px;
+$local-extra-large-max: 1610px;
+$local-medium-down: 780px;
+
+.teams {
+  width: 100vw;
+  height: 100vh;
+  background: url("../../../Assets/Images/mainimg.ba197a13.jpg");
+  background-position: center;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-blue-0;
+    opacity: 0.6;
+  }
+  .teams-wrapper {
+    width: 70%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: 0 auto;
+    color: $color-white-0;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    z-index: 5;
+    transition: all 0.2s;
+    & > div {
+      width: 100%;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      visibility: hidden;
+      left: 0;
+      h2 {
+        font-size: $fs-local-1;
+        font-family: "Montserrat";
+        text-align: center;
+        margin-bottom: 50px;
+        transition: all 0.2s;
+        user-select: none;
+        color: $color-white-0;
+        cursor: text;
+        @media (max-width: $local-medium-down) {
+          font-size: $fs-local-2;
+        }
+      }
+    }
+    .list-wrapper {
+      @media (max-width: $local-medium-down) {
+        max-height: 80vh;
+        overflow: auto;
+        &::-webkit-scrollbar {
+          width: 1.5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: $color-blue-3;
+        }
+
+        &::-webkit-scrollbar {
+          width: 1px;
+        }
+        &::-webkit-scrollbar-track {
+          background: $color-blue-5;
+        }
+      }
+    }
+    .list-team {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 100px;
+      @media (max-width: $local-medium-down) {
+        margin-top: 0;
+      }
+      .item {
+        width: 25%;
+        padding: 1.5%;
+        box-sizing: border-box;
+        visibility: hidden;
+        @media (max-width: $local-extra-large-max) {
+          width: calc(100% / 3);
+          padding: 1.6%;
+        }
+
+        @media (max-width: $local-medium-down) {
+          width: 100%;
+          margin-bottom: 50px;
+        }
+        h3 {
+          font-size: $fs-local-3;
+          font-family: "Montserrat";
+          margin-bottom: 35px;
+          padding-left: 1.5%;
+        }
+        ul > li {
+          font-family: "Montserrat";
+          box-sizing: border-box;
+          padding-left: 3%;
+          display: flex;
+          align-items: center;
+          height: 35px;
+          font-size: $fs-local-4;
+          margin: 0;
+          opacity: 1;
+          transition: all 0.1s;
+        }
+      }
+    }
+  }
+}
