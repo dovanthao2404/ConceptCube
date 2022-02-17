@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router-dom";
 import { data } from "./data";
 import "./style.scss";
+import { gsap } from "gsap";
 const Navbar: React.FC = () => {
     const { t, i18n } = useTranslation();
     const { pathname } = useLocation();
@@ -13,6 +14,15 @@ const Navbar: React.FC = () => {
     const navBarContent = useRef<any>();
     const switchRef = useRef<any>();
 
+
+    useEffect(() => {
+
+        if (pathname === "/contact") {
+            gsap.to(" .box-toggle .icon div", { background: "#222" });
+            gsap.to(" .switch-language.top p:not(.active)", { color: "#222" });
+
+        }
+    }, []);
 
     const handleOpenNavbar = (e: any) => {
         if (btnToggleRef.current && navBarContent.current) {
