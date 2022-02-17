@@ -1,0 +1,243 @@
+@import "Assets/Styles/_index.scss";
+$local-medium: 700px;
+
+$local-grey-0: #e7e7e7;
+
+.popup {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.5s;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    .popup-wrapper {
+        margin: auto;
+        z-index: 12;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-sizing: border-box;
+        padding: 30px 30px 0;
+        background-color: $color-white-0;
+        opacity: 1;
+        width: 80%;
+        height: 100%;
+        transition: opacity 1200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        @media (max-width: 700px) {
+            width: 100% !important;
+            height: 100% !important;
+            border-radius: 0;
+            padding: 40px 5px;
+        }
+    }
+    .popup-header {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        position: relative;
+        .x-btn {
+            display: flex;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            top: -31px;
+            right: -70px;
+            text-align: center;
+            position: absolute;
+            text-align: right;
+            transition: all 0.2s;
+            background-color: $color-black-0;
+            box-shadow: none;
+            color: $color-white-0;
+            @media (max-width: $local-medium) {
+                right: -5px;
+                top: -35px;
+                background-color: $color-white-0;
+            }
+
+            .icon-close {
+                display: block;
+                width: 100%;
+                text-align: center;
+                font-size: 32px;
+                font-weight: 100;
+                transition: all 0.2s;
+                cursor: pointer;
+                @media (max-width: $local-medium) {
+                    font-size: 20px;
+                    color: $color-black-0;
+                }
+                &:hover {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+    .popup-content {
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: relative;
+        box-sizing: border-box;
+        &:hover {
+            &::-webkit-scrollbar-thumb {
+                background-color: $color-black-0;
+            }
+        }
+        &::-webkit-scrollbar {
+            width: 1px;
+            background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $local-grey-0;
+            border-radius: 0.5rem;
+        }
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+            background-color: transparent;
+            border-radius: 0.5rem;
+        }
+        .scroll-inner {
+            position: absolute;
+            width: 98%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            height: auto;
+            box-sizing: border-box;
+            word-break: break-all;
+
+            .main-video {
+                width: 100%;
+                // height: 85vh;
+                video {
+                    width: 100%;
+                    height: auto;
+                }
+                body {
+                    overflow: hidden;
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+                    padding: 0;
+                    background-color: transparent;
+                }
+                @media (min-width: 1407px) {
+                    height: 80vh;
+                }
+
+                @media (max-width: 1350px) {
+                    height: 75vh;
+                }
+                @media (max-width: 1300px) {
+                    height: 75vh;
+                }
+
+                @media (max-width: 1250px) {
+                    height: 70vh;
+                }
+
+                @media (max-width: 1200px) {
+                    height: 70vh;
+                }
+
+                @media (max-width: 1150px) {
+                    height: 60vh;
+                }
+                @media (max-width: 1100px) {
+                    height: 60vh;
+                }
+
+                @media (max-width: 1050px) {
+                    height: 55vh;
+                }
+
+                @media (max-width: 1000px) {
+                    height: 50vh;
+                }
+
+                @media (max-width: 900px) {
+                    height: 45vh;
+                }
+
+                @media (max-width: 800px) {
+                    height: 35vh;
+                }
+
+                @media (max-width: 700px) {
+                    height: 50vh;
+                }
+
+                @media (max-width: 650px) {
+                    height: 43vh;
+                }
+
+                @media (max-width: 590px) {
+                    height: 38vh;
+                    width: 450px;
+                    margin: auto;
+                }
+
+                @media (max-width: 500px) {
+                    height: 35vh;
+                    width: 430px;
+                    margin: auto;
+                }
+                @media (max-width: 450px) {
+                    height: 30vh;
+                    width: 380px;
+                    margin: auto;
+                }
+            }
+            .main-design {
+                padding-top: 30px;
+                img {
+                    width: 100%;
+                }
+            }
+            .over-view {
+                margin: 40px auto;
+                margin-bottom: 85px;
+                color: #000;
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                .type {
+                    font-size: 12px;
+                    font-weight: 700;
+                    font-family: Montserrat;
+                    margin-bottom: 15px;
+                }
+                .company {
+                    font-weight: 700;
+                    font-size: 25px;
+                }
+            }
+            .contact-works {
+                width: 150px;
+                height: 50px;
+                background-color: $color-black-0;
+                margin: 30px auto;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $color-white-0;
+                cursor: pointer;
+                a {
+                    color: $color-white-0;
+                    font-weight: $fw-0;
+                }
+            }
+        }
+    }
+}

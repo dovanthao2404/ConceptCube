@@ -1,24 +1,27 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Card from '../Card/Card';
-import data from "../data.json";
 import "./List.scss";
 
 interface list {
-    tab: string;
+    tab: string,
+    handleOpen: any;
 }
 
-const List: React.FC<list> = ({ tab }) => {
-
+const List: React.FC<list> = ({ tab, handleOpen }) => {
+    const { t } = useTranslation();
     const renderCard = (data: any) => {
 
         return data.map((item: any) => {
-            return <Card key={item.id} item={item} />;
+            return <Card handleOpen={handleOpen} key={item.id} item={item} />;
         });
     };
-    let dataFilter = [...data];
+    const listData = t("works", { returnObjects: true }) as any;
+
+    let dataFilter = [...listData];
 
     if (tab !== "ALL") {
-        dataFilter = data.filter((item: any) => {
+        dataFilter = listData.filter((item: any) => {
             return item.desc === tab;
         });
     }

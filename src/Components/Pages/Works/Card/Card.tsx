@@ -2,14 +2,17 @@ import React from 'react';
 import "./Card.scss";
 
 interface card {
-    item: any;
+    item: any,
+    handleOpen: any;
 }
 
-const Card: React.FC<card> = ({ item }) => {
+const Card: React.FC<card> = ({ item, handleOpen }) => {
     return (
         <div className='card-pd'>
 
-            <div className='work-card'>
+            <div onClick={() => {
+                handleOpen(item);
+            }} className='work-card'>
                 <div className="content">
                     <div className='inner_flex'>
                         <div>
