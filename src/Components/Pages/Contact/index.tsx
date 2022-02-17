@@ -6,12 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLocation, useNavigate } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 const Contact: React.FC = () => {
-    const { pathname } = useLocation();
-    const nv = useNavigate();
-    useEffect(() => {
 
-
-    }, []);
 
     useEffect(() => {
         const titleContact = document.querySelector('.contact-title');
