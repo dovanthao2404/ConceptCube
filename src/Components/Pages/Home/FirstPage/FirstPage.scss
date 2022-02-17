@@ -3,11 +3,34 @@
 .first-page {
   .logo {
     position: absolute;
-    top: 7.5%;
+    top: 75px;
     left: 7.5%;
     z-index: 1;
     .logo-img {
       user-select: none;
+    }
+  }
+  .about {
+    position: absolute;
+    z-index: 1;
+    top: 75px;
+    right: 175px;
+    @include responsive("large-down") {
+      right: 130px;
+    }
+    @include responsive("small-down") {
+      right: 100px;
+    }
+
+    @include responsive("very-small-down") {
+      right: 90px;
+      top: 76px;
+    }
+    p {
+      @include styleText($fs-1, $fw-1, $color-green-0);
+      @include responsive("very-small-down") {
+        font-size: $fs-15;
+      }
     }
   }
   .img {

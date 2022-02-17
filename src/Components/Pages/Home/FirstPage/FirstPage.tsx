@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "Assets/Images/logo-icon.png";
 import "./FirstPage.scss";
-import ScrollAnimation from "react-animate-on-scroll";
 const FistPage: React.FC = () => {
 
     const renderImage = () => {
@@ -18,19 +17,16 @@ const FistPage: React.FC = () => {
             <div className="logo">
                 <img className="logo-img" src={logo} alt="" />
             </div>
+            <div className="about">
+                <p>About The Project</p>
+            </div>
             {renderImage()}
-            {/* <ScrollAnimation
-                animateIn="bounceInLeft"
-                animateOut="fadeOut"
-                duration={1.2}
-            > */}
             <div className="first-title">
                 <p> everything
                 </p>
                 <p>is in the</p>
                 <p>conceptcube</p>
             </div>
-            {/* </ScrollAnimation> */}
             <div className="introduction">
                 <p>ConceptCube Company Introduction
                 </p>

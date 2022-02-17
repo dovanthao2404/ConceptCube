@@ -8,10 +8,22 @@
 
 body {
   font-family: Montserrat;
+  user-select: none;
 }
 
 #fp-nav.fp-right {
-  right: 3.1%;
+  right: 60px;
+  z-index: 14;
+
+  @include responsive("large-down") {
+    right: 40px;
+  }
+  @include responsive("small-down") {
+    right: 24px;
+  }
+  @include responsive("small-down") {
+    right: 20px;
+  }
   ul > li {
     margin: 8px 0;
     a,

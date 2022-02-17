@@ -1,14 +1,199 @@
+@import "Assets/Styles/_index.scss";
 .nav-bar {
-  //   position: absolute;
-  //   z-index: 4;
-  //   top: 4.6%;
-  //   right: 3.1%;
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  z-index: 10;
-  //   display: flex;
-  //   align-items: center;
-  .navigation {
+  position: relative;
+  nav {
+    position: absolute;
+    z-index: 100;
+    right: 60px;
+    top: 40px;
+    @include responsive("large-down") {
+      right: 40px;
+    }
+    @include responsive("small-down") {
+      right: 24px;
+    }
+    @include responsive("small-down") {
+      right: 20px;
+    }
+    .box-toggle {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 5px;
+      .icon {
+        cursor: pointer;
+        div {
+          display: block;
+          width: 40px;
+          height: 1px;
+          margin-bottom: 7.5px;
+          background: $color-white-0;
+          transform-origin: 7px -2px;
+          transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+
+          &:first-child {
+            transform-origin: 0% 0%;
+          }
+          &:nth-last-child(2) {
+            transform-origin: 0% 100%;
+          }
+        }
+        &.open {
+          div {
+            height: 1px;
+            opacity: 1;
+            transform: rotate(45deg) translate(1px, -6px);
+            background: #fff !important;
+
+            &:nth-child(2) {
+              opacity: 0;
+              transform: rotate(0deg) scale(0.2, 0.2);
+            }
+
+            &:nth-child(3) {
+              transform: rotate(-45deg) translate(-1px, 3px);
+            }
+          }
+        }
+      }
+    }
+    .switch-language {
+      display: flex;
+      opacity: 1;
+      transition: all 0.3s;
+      &.open {
+        opacity: 0;
+      }
+      p {
+        cursor: pointer;
+        user-select: none;
+        margin-left: 8px;
+        text-align: right;
+        @include styleText($fs-4, $fw-1, $color-white-0);
+        &.active {
+          color: $color-green-2;
+        }
+      }
+    }
+  }
+  .nav-bar-content {
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    right: 0;
+    background-color: $color-blue-1;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.3);
+    height: 100vh;
+    width: 532px;
+    transform: translateX(532px);
+    @include responsive("extra-large-down") {
+      width: 450px;
+      transform: translateX(450px);
+    }
+
+    @include responsive("large-down") {
+      width: 400px;
+      transform: translateX(400px);
+    }
+    @include responsive("medium-down") {
+      width: 360px;
+      transform: translateX(360px);
+    }
+    @include responsive("small-down") {
+      width: 300px;
+      transform: translateX(300px);
+    }
+    @include responsive("very-small-down") {
+      width: 240px;
+      transform: translateX(240px);
+    }
+
+    transition: all 0.3s;
+    &.open {
+      transform: translateX(0);
+    }
+    nav {
+      .box-toggle {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    .list-link {
+      padding: 150px 50px 50px 32px;
+      height: 100%;
+      @include responsive("small-down") {
+        padding-top: 100px;
+      }
+
+      .link {
+        .item-link {
+          margin-bottom: 15px;
+          cursor: pointer;
+          p {
+            @include styleText($fs-14, $fw-1, $color-white-0);
+            text-decoration: none;
+            user-select: none;
+            width: 100%;
+            transition: all 0.3s;
+            @include responsive("small-down") {
+              font-size: $fs-16;
+            }
+            @include responsive("very-small-down") {
+              font-size: $fs-4;
+            }
+            &:hover {
+              color: $color-green-0;
+            }
+          }
+          &.active {
+            p {
+              color: $color-green-0;
+            }
+          }
+        }
+      }
+      .info {
+        position: fixed;
+        padding-right: 82px;
+        bottom: 50px;
+        width: 100%;
+        .infoWrapper {
+          width: 100%;
+          border-top: 2px solid #fff;
+          width: 100%;
+          .address {
+            padding-top: 50px;
+            padding-bottom: 30px;
+            @include responsive("medium-down") {
+              padding-bottom: 20px;
+              padding-top: 30px;
+            }
+            @include responsive("very-small-down") {
+              padding-top: 20px;
+              padding-bottom: 15px;
+            }
+            font-family: NotoSansCJKkr;
+            @include styleText($fs-1, $fw-5, $color-white-0);
+            user-select: none;
+            @include responsive("very-small-down") {
+              font-size: $fs-17;
+            }
+          }
+          .link {
+            a {
+              user-select: none;
+              @include styleText($fs-1, $fw-0, $color-white-0);
+              text-decoration: none;
+              @include responsive("very-small-down") {
+                font-size: $fs-17;
+              }
+            }
+          }
+          .title-nav-footer {
+            @include styleText($fs-1, $fw-0, $color-white-0);
+          }
+        }
+      }
+    }
   }
 }
