@@ -1,0 +1,82 @@
+@import "Assets/Styles/_index.scss";
+
+$local-grey-0: #b4b4b4;
+$local-grey-1: rgba(0, 0, 0, 0.5);
+$local-grey-2: #ccc;
+$local-grey-3: #f2f9fc;
+$local-dark-1: #333;
+$local-dark-2: rgba(51, 51, 51, 0.8);
+$local-dark-3: rgba(0, 0, 0, 0.06);
+
+$local-fs-1: 11px;
+
+.menu-tab {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    & > ul {
+        display: flex;
+        li {
+            padding: 2px 5px;
+            box-sizing: border-box;
+            cursor: pointer;
+            font-family: Montserrat;
+            @include styleText($local-fs-1, $fw-1, $local-grey-0);
+            transition: all 0.2s;
+            &:hover {
+                color: $local-grey-1;
+            }
+            &.active {
+                color: $color-black-0;
+            }
+        }
+    }
+    .drop-down {
+        position: relative;
+        .drop-down-control {
+            position: relative;
+            overflow: hidden;
+            background-color: $color-white-0;
+            border: 1px solid $local-grey-2;
+            border-radius: 2px;
+            box-sizing: border-box;
+            color: $local-dark-1;
+            cursor: default;
+            outline: none;
+            padding: 8px 52px 8px 10px;
+            transition: all 0.2s ease;
+            .placeholder {
+                font-weight: 100;
+                color: $local-dark-1;
+            }
+        }
+        .drop-down-menu {
+            background-color: $color-white-0;
+            border: 1px solid $local-grey-2;
+            box-shadow: 0 1px 0 $local-dark-3;
+            box-sizing: border-box;
+            margin-top: -1px;
+            max-height: 200px;
+            overflow-y: auto;
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            display: none;
+            z-index: 500;
+            &.open {
+                display: block;
+            }
+            .drop-down-item {
+                font-weight: 100;
+                box-sizing: border-box;
+                color: $local-dark-2;
+                cursor: pointer;
+                display: block;
+                padding: 8px 10px;
+                &.active {
+                    background-color: $local-grey-3;
+                    color: $local-dark-1;
+                }
+            }
+        }
+    }
+}

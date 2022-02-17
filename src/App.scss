@@ -11,6 +11,14 @@ body {
   user-select: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul,ol {
+  list-style: none;
+}
+
 #fp-nav.fp-right {
   right: 60px;
   z-index: 14;

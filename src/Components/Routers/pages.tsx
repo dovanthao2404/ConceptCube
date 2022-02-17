@@ -1,4 +1,5 @@
 import Teams from "Components/Pages/Teams";
+import Works from "Components/Pages/Works";
 import Contact from "../Pages/Contact";
 import Home from "../Pages/Home";
 import { RoutesString } from "./routerStrings";
@@ -20,6 +21,10 @@ const pages: pagesInterface[] = [
     {
         path: RoutesString.Teams,
         component: Teams,
+    },
+    {
+        path: RoutesString.Works,
+        component: Works
     }
 ];
 

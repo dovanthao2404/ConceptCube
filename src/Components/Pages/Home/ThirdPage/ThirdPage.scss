@@ -9,8 +9,18 @@
     }
 
     .third-page-slider {
+      .slick-track {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-auto-flow: column;
+      }
       .slick-list {
         overflow: unset;
+      }
+      .slick-slide {
+        & > div {
+          height: 100%;
+        }
       }
 
       .card {
@@ -20,6 +30,9 @@
         img {
           width: 100%;
           object-fit: cover;
+          @include responsive("small-down") {
+            display: none;
+          }
         }
         .card-content {
           h1 {
@@ -32,6 +45,7 @@
             padding-top: 42px;
             @include responsive("small-down") {
               font-size: $fs-4;
+              padding-top: 20px;
             }
           }
         }
@@ -46,6 +60,12 @@
             &.card-bottom-3 {
               padding-bottom: 40px;
             }
+            @include responsive("small-down") {
+              padding-right: 20px;
+              p {
+                line-height: 1.5;
+              }
+            }
           }
 
           h3 {
@@ -55,6 +75,9 @@
             @include responsive("small-down") {
               color: $color-blue-2;
               display: block;
+            }
+            @include responsive("small-down") {
+              display: none;
             }
           }
           p {
@@ -72,10 +95,6 @@
             p {
               font-size: $fs-1;
             }
-            h3 {
-            }
-            p {
-            }
           }
         }
         &.active {
@@ -88,6 +107,9 @@
               h3 {
                 display: block;
                 color: $color-green-2;
+                @include responsive("small-down") {
+                  display: none;
+                }
               }
               p {
                 color: $color-green-2;

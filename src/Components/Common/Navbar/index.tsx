@@ -49,20 +49,20 @@ const Navbar: React.FC = () => {
         }
     };
 
-    const mouseDownMemo = useCallback((e) => handleMouseDown(e), []);
+    const mouseDownCallback = useCallback((e) => handleMouseDown(e), []);
 
 
     useEffect(() => {
-        if (mouseDownMemo) {
-            document.addEventListener("mousedown", mouseDownMemo);
+        if (mouseDownCallback) {
+            document.addEventListener("click", mouseDownCallback);
         }
-    }, [mouseDownMemo]);
+    }, [mouseDownCallback]);
 
     useEffect(() => {
         return () => {
-            document.removeEventListener("mousedown", mouseDownMemo);
+            document.removeEventListener("click", mouseDownCallback);
         };
-    }, [mouseDownMemo]);
+    }, [mouseDownCallback]);
 
     return (
         <div className="nav-bar">
@@ -144,7 +144,7 @@ const Navbar: React.FC = () => {
                             <p className="address">
                                 {t("navbarAddress")}
                                 <br />
-                                 T 02 543 4983
+                                T 02 543 4983
                             </p>
                             <p className="link">
                                 <a
