@@ -27,11 +27,6 @@ const List: React.FC<list> = ({ tab, handleOpen }) => {
     }
 
 
-    useEffect(() => {
-
-    }, []);
-
-
 
     return (
         <div className='work-list'>
