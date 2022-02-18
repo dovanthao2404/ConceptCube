@@ -31,12 +31,25 @@ const List: React.FC<list> = ({ tab, handleOpen }) => {
 
     useEffect(() => {
 
-        const listCard = document.querySelectorAll(".work-list .card-pd");
-        if (listCard) {
-            gsap.from(listCard, {
-                autoAlpha: 0,
-                stagger: 0.05,
-            });
+        const listCard = document.querySelectorAll(".work-list .card-pd") as any;
+        listCard.forEach((item: HTMLElement) => {
+            item.style.visibility = "hidden";
+        });
+        if (listCard && listCard.length) {
+            if (listCard.length === 2) {
+                const TL = gsap.timeline();
+                TL.from(listCard[0], {
+                    autoAlpha: 0,
+                }).set(listCard[1], {
+                    visibility: "visible",
+                    opacity: 1,
+                }, "-=0.3");
+            } else {
+                gsap.from(listCard, {
+                    autoAlpha: 0,
+                    stagger: 0.05,
+                });
+            }
         }
     }, [tab]);
 
