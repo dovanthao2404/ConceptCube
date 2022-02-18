@@ -24,6 +24,16 @@ const Home: React.FC = () => {
 
     }, []);
 
+    useEffect(() => {
+        return () => {
+            const navbarEle = document.querySelector(".nav-bar .switch-language.top") as any;
+
+            const btnToggleEl = document.querySelector(".nav-bar .icon.top") as any;
+            navbarEle.classList.remove("page-four");
+            btnToggleEl.classList.remove("page-four");
+        };
+    }, []);
+
 
 
     return <ReactFullpage
