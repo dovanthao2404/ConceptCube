@@ -68,9 +68,6 @@ ol {
           margin: -2px 0 0 -2px;
           width: 8px;
           height: 8px;
-          // @if (a[href="#secondPage"].active) {
-
-          // }
         }
       }
     }
@@ -89,18 +86,6 @@ ol {
       &.active {
         span {
           background-color: $color-blue-1;
-        }
-        // [dir="rtl"] & {
-        //   // margin-left: 0;
-        //   background: red;
-        //   // margin-right: 10px;
-        // }
-        #{$li} {
-          a {
-            span {
-              background-color: red;
-            }
-          }
         }
       }
     }
