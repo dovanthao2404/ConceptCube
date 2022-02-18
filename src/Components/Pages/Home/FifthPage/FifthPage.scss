@@ -1,5 +1,5 @@
 @import "Assets/Styles/_index.scss";
-$local-extra-large-max: 1680px;
+
 .fifth-page {
   background: url("../../../../Assets/Images/05-bg.png");
   height: 100%;
@@ -82,10 +82,6 @@ $local-extra-large-max: 1680px;
     visibility: hidden;
     max-width: 900px;
     @include styleText($fs-7, $fw-2, $color-green-1);
-
-    @media (max-width: $local-extra-large-max) {
-      font-size: $fs-6;
-    }
     @include responsive("extra-large-down") {
       font-size: $fs-6;
     }

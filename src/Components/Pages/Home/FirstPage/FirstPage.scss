@@ -1,5 +1,5 @@
 @import "Assets/Styles/index";
-
+$local-extra-large-max: 1680px;
 .first-page {
   .logo {
     position: absolute;
@@ -107,6 +107,17 @@
     user-select: none;
     z-index: 3;
     transform: translateY(0);
+
+    @media (max-width: $local-extra-large-max) {
+      font-size: $fs-10;
+      font-size: $fs-10;
+      justify-content: center;
+
+      height: 100%;
+      display: flex;
+      top: 0;
+      flex-direction: column;
+    }
     @include responsive("extra-large-max-down") {
       font-size: $fs-10;
       justify-content: center;
@@ -116,6 +127,7 @@
       top: 0;
       flex-direction: column;
     }
+
     @include responsive("extra-large-down") {
       font-size: $fs-7;
     }
