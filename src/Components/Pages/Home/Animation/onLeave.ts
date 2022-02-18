@@ -9,14 +9,15 @@ const hiddenItem = (listEle: string[]) => {
 };
 
 export const onLeave = (a: any, destination: any, c: any) => {
-
+    console.log(destination.index);
     if (destination.index === 0) {
         const listEle: string[] = ['.first-title', ".first-page .logo", ".first-page .introduction", ".first-page .about"];
         hiddenItem(listEle);
     } else if (destination.index === 1) {
 
-        const listEle: string[] = ['.second-page .creative .first', ".second-page .creative .fun", ".second-page .creative .enjoyable", ".second-page .creative .work", ".second-page .creative .impressive"];
+        const listEle: string[] = ['.second-page .creative .first', ".second-page .creative .fun", ".second-page .creative .enjoyable", ".second-page .creative .work", ".second-page .creative .impressive", ".third-page-slider .slick-slide"];
         hiddenItem(listEle);
+
 
     }
     else if (destination.index === 2) {
@@ -30,10 +31,19 @@ export const onLeave = (a: any, destination: any, c: any) => {
         const btnToggleEl = document.querySelector(".nav-bar .icon.top") as any;
         navbarEle.classList.remove("page-four");
         btnToggleEl.classList.remove("page-four");
+        gsap.from(".third-page-slider .slick-slide ", {
+            autoAlpha: 0,
+            y: -300,
+            duration: 1,
+            ease: "power4.out",
+            stagger: 0.2,
+            delay: 0.5
+        });
+
 
     }
     else if (destination.index === 3) {
-        const listEle: string[] = ['.four-section .box > .title', ".list-history"];
+        const listEle: string[] = ['.four-section .box > .title', ".list-history", ".third-page-slider .slick-slide"];
         hiddenItem(listEle);
         const dotEle = document.querySelectorAll("#fp-nav ul li a") as any;
 
@@ -43,6 +53,8 @@ export const onLeave = (a: any, destination: any, c: any) => {
         const navbarEle = document.querySelector(".nav-bar .switch-language.top") as any;
 
         const btnToggleEl = document.querySelector(".nav-bar .icon.top") as any;
+
+
 
         navbarEle.classList.add("page-four");
         btnToggleEl.classList.add("page-four");

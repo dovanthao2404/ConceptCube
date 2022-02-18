@@ -7,25 +7,22 @@ $local-very-small-down: 375px;
 
 .contact-container {
   height: 100vh;
+  @media screen and (max-width: 840px) {
+    height: unset;
+  }
   .contact-content {
     height: 100%;
     @media screen and (max-width: $local-large-down) {
-      height: 80%;
-      overflow: auto;
       position: relative;
       top: 150px;
     }
     @media screen and (max-width: $local-small-down-1) {
-      height: 80%;
-      overflow: auto;
       position: relative;
-      top: 122px;
+      top: 100px;
     }
     @media screen and (max-width: $local-very-small-down) {
-      height: 80%;
-      overflow: auto;
       position: relative;
-      top: 116px;
+      top: 80px;
     }
 
     header {
@@ -58,6 +55,9 @@ $local-very-small-down: 375px;
       width: 50%;
       @media screen and (max-width: $local-large-down) {
         width: 100%;
+        &.gg-map {
+          height: 300px;
+        }
       }
       iframe,
       .info {
@@ -71,7 +71,9 @@ $local-very-small-down: 375px;
         flex-direction: column;
         min-height: 396px;
         justify-content: space-between;
-
+        @include responsive("medium-down") {
+          min-height: unset;
+        }
         .top {
           line-height: 1.6;
           color: $color-white-0;
@@ -79,6 +81,10 @@ $local-very-small-down: 375px;
           @media (max-width: $local-extra-large) {
             padding-top: 18.8%;
             padding-left: 18.8%;
+          }
+          @include responsive("medium-down") {
+            padding-top: 12.8%;
+            padding-left: 12.8%;
           }
           p {
             user-select: none;
@@ -92,6 +98,10 @@ $local-very-small-down: 375px;
           @media (max-width: $local-extra-large) {
             padding-bottom: 18.8%;
             padding-right: 18.8%;
+          }
+          @include responsive("medium-down") {
+            padding-bottom: 12.8%;
+            padding-right: 12.8%;
           }
           color: $color-white-0;
           text-align: end;

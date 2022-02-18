@@ -7,7 +7,7 @@ $local-fs-1: 29px;
 .nav-bar {
   position: relative;
   nav {
-    position: absolute;
+    position: fixed;
     z-index: 100;
     right: 60px;
     top: 50px;

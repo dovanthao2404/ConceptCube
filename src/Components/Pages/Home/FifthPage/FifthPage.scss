@@ -13,9 +13,7 @@ $local-extra-large-max: 1680px;
     z-index: 1;
     visibility: hidden;
     .fifth-item {
-      margin-bottom: 65px;
-      visibility: hidden;
-
+      margin-bottom: 55px;
       @include responsive("extra-large-down") {
         margin-bottom: 40px;
       }
