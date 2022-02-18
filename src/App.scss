@@ -21,17 +21,17 @@ ol {
 }
 
 #fp-nav.fp-right {
-  right: 60px;
+  right: 60px !important;
   z-index: 14;
 
   @include responsive("large-down") {
-    right: 40px;
+    right: 40px !important;
   }
   @include responsive("small-down") {
-    right: 24px;
+    right: 24px !important;
   }
   @include responsive("small-down") {
-    right: 20px;
+    right: 20px !important;
   }
   ul > li {
     margin: 8px 0;
@@ -81,7 +81,6 @@ ol {
       }
     }
 
-    $li: &;
     a[href="#fourthPage"] {
       &.active {
         span {
