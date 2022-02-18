@@ -71,7 +71,6 @@ const Navbar: React.FC = () => {
                     <div ref={btnToggleRef} className="icon top" onClick={handleOpenNavbar}>
                         <div></div>
                         <div></div>
-                        <div></div>
                     </div>
                 </div>
                 <div ref={switchRef} className="switch-language top">
@@ -97,7 +96,6 @@ const Navbar: React.FC = () => {
                 <nav role="navigation">
                     <div className="box-toggle">
                         <div className="icon">
-                            <div></div>
                             <div></div>
                             <div></div>
                         </div>

@@ -1,9 +1,7 @@
 import gsap from "gsap";
 
 export const afterLoad = (origin: any, destination: any, direction: any) => {
-
     if (destination.index === 0) {
-        gsap.set("#fp-nav ul li a.active span ", { background: "#1b0080" });
 
         const TL = gsap.timeline();
         TL
@@ -24,13 +22,12 @@ export const afterLoad = (origin: any, destination: any, direction: any) => {
 
 
     } else if (destination.index === 1) {
-        gsap.set("#fp-nav ul li a.active span ", { background: "#ccee5d" });
+
 
 
 
 
     } else if (destination.index === 2) {
-        gsap.set("#fp-nav ul li a.active span ", { background: "#ccee5d" });
 
 
 
@@ -38,7 +35,9 @@ export const afterLoad = (origin: any, destination: any, direction: any) => {
 
     } else if (destination.index === 3) {
 
-        gsap.set("#fp-nav ul li a.active span ", { background: "#1b0080" });
+
+
+
 
         gsap.from(".four-section .box > .title", {
             autoAlpha: 0,
@@ -74,7 +73,7 @@ export const afterLoad = (origin: any, destination: any, direction: any) => {
                 x: -300,
                 autoAlpha: 0,
             }, "-=0.6");
-        gsap.set("#fp-nav ul li a.active span ", { background: "#ccee5d" });
+
 
 
     }

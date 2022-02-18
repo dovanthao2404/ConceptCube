@@ -23,9 +23,7 @@ const Card: React.FC<card> = ({ item, handleOpen }) => {
                         </div>
                     </div>
                 </div>
-                <div className={"card-background"} style={{
-                    backgroundImage: `url(${item.img})`
-                }}></div>
+                <img loading='lazy' className="card-background" src={item.img} alt="" />
             </div>
         </div>
     );

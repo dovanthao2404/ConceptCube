@@ -7,7 +7,7 @@ $local-blue-0: #199dfb;
     position: absolute;
     z-index: 100;
     right: 60px;
-    top: 40px;
+    top: 50px;
     @include responsive("large-down") {
       right: 40px;
     }
@@ -43,7 +43,7 @@ $local-blue-0: #199dfb;
           &:first-child {
             transform-origin: 0% 0%;
           }
-          &:nth-last-child(2) {
+          &:nth-last-child(1) {
             transform-origin: 0% 100%;
           }
         }
@@ -51,16 +51,11 @@ $local-blue-0: #199dfb;
           div {
             height: 1px;
             opacity: 1;
-            transform: rotate(45deg) translate(1px, -6px);
+            transform: rotate(45deg) translate(1px, -14px);
             background: $color-white-0 !important;
 
             &:nth-child(2) {
-              opacity: 0;
-              transform: rotate(0deg) scale(0.2, 0.2);
-            }
-
-            &:nth-child(3) {
-              transform: rotate(-45deg) translate(-1px, 3px);
+              transform: rotate(-45deg) translate(1px, 14px);
             }
           }
         }

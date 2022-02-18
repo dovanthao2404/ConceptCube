@@ -5,6 +5,7 @@ import { dataType } from "../dataType";
 
 import "./MenuTab.scss";
 
+
 interface menuTab {
   tab: string,
   setTab: any;
@@ -33,6 +34,7 @@ const MenuTab: React.FC<menuTab> = ({ tab, setTab }) => {
 
     };
   }, []);
+
 
   const handleResize = (e: any) => {
 
@@ -100,7 +102,7 @@ const MenuTab: React.FC<menuTab> = ({ tab, setTab }) => {
                 })}`
               });
 
-            }} className={`${tab === item.value ? "active" : ""}`} key={item.id}>{item.value}</li>;
+            }} className={`menu-tab-item ${tab === item.value ? "active" : ""}`} key={item.id}><span>{item.value}</span></li>;
           })}
         </ul>
       </div>

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Card from '../Card/Card';
 import "./List.scss";
-
+import { gsap } from "gsap";
 interface list {
     tab: string,
     handleOpen: any;
@@ -25,6 +25,13 @@ const List: React.FC<list> = ({ tab, handleOpen }) => {
             return item.desc === tab;
         });
     }
+
+
+    useEffect(() => {
+
+    }, []);
+
+
 
     return (
         <div className='work-list'>
