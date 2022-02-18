@@ -3,7 +3,6 @@ import { routers } from "./Components/Routers/router";
 import "./App.scss";
 import Navbar from "./Components/Common/Navbar";
 import React, { Fragment } from "react";
-import PageNotFound from "Components/Pages/PageNotFound";
 
 function App() {
 
@@ -22,7 +21,6 @@ function App() {
       {renderNavbar()}
       <Routes>
         {routers()}
-        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Fragment>
   );
