@@ -1,6 +1,9 @@
 @import "Assets/Styles/_index.scss";
 $local-grey-0: #cdcdcd;
 $local-blue-0: #199dfb;
+$local-fs-0: 36px;
+$local-fs-1: 29px;
+
 .nav-bar {
   position: relative;
   nav {
@@ -20,7 +23,7 @@ $local-blue-0: #199dfb;
     .box-toggle {
       display: flex;
       justify-content: flex-end;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
       .icon {
         cursor: pointer;
         &.top {
@@ -34,7 +37,7 @@ $local-blue-0: #199dfb;
           display: block;
           width: 40px;
           height: 1px;
-          margin-bottom: 7.5px;
+          margin-bottom: 7px;
           background: $color-white-0;
           transform-origin: 7px -2px;
           transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
@@ -51,11 +54,11 @@ $local-blue-0: #199dfb;
           div {
             height: 1px;
             opacity: 1;
-            transform: rotate(45deg) translate(1px, -14px);
+            transform: rotate(45deg) translate(1px, -15px);
             background: $color-white-0 !important;
 
             &:nth-child(2) {
-              transform: rotate(-45deg) translate(1px, 14px);
+              transform: rotate(-45deg) translate(1px, 15px);
             }
           }
         }
@@ -71,11 +74,9 @@ $local-blue-0: #199dfb;
       &.top {
         &.contact {
           p {
-            // color: $color-blue-4;
             color: $local-grey-0;
 
             &.active {
-              // color: $color-green-2;
               color: $local-blue-0;
             }
           }
@@ -149,11 +150,14 @@ $local-blue-0: #199dfb;
           margin-bottom: 15px;
           cursor: pointer;
           p {
-            @include styleText($fs-14, $fw-1, $color-white-0);
+            @include styleText($local-fs-0, $fw-1, $color-white-0);
             text-decoration: none;
             user-select: none;
             width: 100%;
             transition: all 0.3s;
+            @include responsive("extra-large-max-down") {
+              font-size: $local-fs-1;
+            }
             @include responsive("small-down") {
               font-size: $fs-16;
             }

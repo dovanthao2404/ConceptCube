@@ -15,6 +15,7 @@ $local-extra-large-max: 1680px;
     z-index: 1;
     top: 75px;
     right: 175px;
+    visibility: hidden;
     @include responsive("large-down") {
       right: 130px;
     }

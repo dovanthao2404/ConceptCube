@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Card from '../Card/Card';
 import "./List.scss";
@@ -10,6 +10,7 @@ interface list {
 
 const List: React.FC<list> = ({ tab, handleOpen }) => {
     const { t } = useTranslation();
+    const [dataRender, setDataRender] = useState();
     const renderCard = (data: any) => {
 
         return data.map((item: any) => {
@@ -24,7 +25,21 @@ const List: React.FC<list> = ({ tab, handleOpen }) => {
         dataFilter = listData.filter((item: any) => {
             return item.desc === tab;
         });
+
     }
+
+
+    useEffect(() => {
+
+        const listCard = document.querySelectorAll(".work-list .card-pd");
+        if (listCard) {
+            gsap.from(listCard, {
+                autoAlpha: 0,
+                stagger: 0.05,
+            });
+        }
+    }, [tab]);
+
 
 
 

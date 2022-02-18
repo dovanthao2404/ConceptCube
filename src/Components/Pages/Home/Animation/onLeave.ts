@@ -12,7 +12,7 @@ export const onLeave = (a: any, destination: any, c: any) => {
 
 
     if (destination.index === 0) {
-        const listEle: string[] = ['.first-title', ".first-page .logo", ".first-page .introduction"];
+        const listEle: string[] = ['.first-title', ".first-page .logo", ".first-page .introduction", ".first-page .about"];
         hiddenItem(listEle);
     }
     else if (destination.index === 2) {

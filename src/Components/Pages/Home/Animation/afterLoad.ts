@@ -9,6 +9,10 @@ export const afterLoad = (origin: any, destination: any, direction: any) => {
                 y: -200,
                 autoAlpha: 0
             }, "-=0.3")
+            .from(".first-page .about", {
+                y: -200,
+                autoAlpha: 0
+            }, "-=0.4")
             .from(".first-title", {
                 x: -300,
                 autoAlpha: 0,

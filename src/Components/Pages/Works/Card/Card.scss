@@ -17,6 +17,7 @@ $local-medium: 720px;
     width: 30%;
     position: relative;
     margin: 1%;
+    visibility: hidden;
     float: left;
     @media (min-width: $local-extra-large-max) {
         width: 24%;
