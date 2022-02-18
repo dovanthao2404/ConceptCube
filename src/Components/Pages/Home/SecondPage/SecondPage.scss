@@ -11,6 +11,9 @@
     user-select: none;
     width: 1562px;
     line-height: 0.87;
+    p {
+      visibility: hidden;
+    }
     @include styleText($fs-9, $fw-2, $color-green-0);
     @include responsive("large-down") {
       font-size: $fs-8;

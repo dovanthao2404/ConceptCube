@@ -32,11 +32,11 @@ const SecondPage: React.FC = () => {
         <section className="section">
             <div className='second-page'>
                 <div className='creative'>
-                    Creative,
-                    Fun and-
-                    Enjoyable
-                    work
-                    Impressive
+                    <p className='first'>Creative,</p>
+                    <p className='fun'>Fun and-</p>
+                    <p className='enjoyable'>Enjoyable</p>
+                    <p className='work'>work</p>
+                    <p className='impressive'>Impressive</p>
                 </div>
 
                 <div className='slider-page-two'>

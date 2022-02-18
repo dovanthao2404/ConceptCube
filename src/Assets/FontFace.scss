@@ -9,6 +9,12 @@
 }
 
 @font-face {
+  font-family: "Montserrat-Medium";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./Fonts/Montserrat/Montserrat-Medium.ttf");
+}
+@font-face {
   font-family: "Montserrat";
   font-weight: 500;
   src: url("./Fonts/Montserrat/Montserrat-Medium.ttf");
@@ -38,6 +44,13 @@
 }
 
 // NotoSansCJKkr
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 100;
+  src: url("./Fonts/NotoSansCJKkr/NotoSansCJKkr-Thin.otf");
+}
 
 @font-face {
   font-family: "NotoSansCJKkr";

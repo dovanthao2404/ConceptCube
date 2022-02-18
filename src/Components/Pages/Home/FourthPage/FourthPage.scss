@@ -56,8 +56,8 @@
             margin-right: 5%;
             margin-top: 30px;
             .text {
-              @include styleText($fs-2, $fw-2, $color-blue-0);
-              font-family: Montserrat-medium;
+              @include styleText($fs-2, 100, $color-blue-0);
+              font-family: Montserrat-Medium, Noto Sans KR;
             }
             .type {
               @include styleText($fs-2, $fw-1, $color-blue-0);

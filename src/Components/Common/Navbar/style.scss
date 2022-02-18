@@ -27,6 +27,11 @@ $local-fs-1: 29px;
       .icon {
         cursor: pointer;
         &.top {
+          &.page-four {
+            div {
+              background-color: $color-blue-0;
+            }
+          }
           &.contact {
             div {
               background-color: $local-grey-0;
@@ -72,6 +77,14 @@ $local-fs-1: 29px;
         opacity: 0;
       }
       &.top {
+        &.page-four {
+          p {
+            color: $color-blue-0;
+            &.active {
+              color: $color-blue-1;
+            }
+          }
+        }
         &.contact {
           p {
             color: $local-grey-0;

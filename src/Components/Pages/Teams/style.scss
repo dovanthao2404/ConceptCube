@@ -3,6 +3,7 @@ $fs-local-1: 80px;
 $fs-local-2: 40px;
 $fs-local-3: 24px;
 $fs-local-4: 12px;
+$fs-local-5: 60px;
 $local-extra-large-max: 1610px;
 $local-medium-down: 780px;
 
@@ -38,6 +39,12 @@ $local-medium-down: 780px;
     padding: 0;
     z-index: 5;
     transition: all 0.2s;
+    @media (max-width: $local-extra-large-max) {
+      width: 80%;
+    }
+    @include responsive("large-down") {
+      width: 90%;
+    }
     & > div {
       width: 100%;
     }
@@ -55,6 +62,11 @@ $local-medium-down: 780px;
         user-select: none;
         color: $color-white-0;
         cursor: text;
+
+        @include responsive("large-down") {
+          font-size: $fs-local-5;
+          margin-bottom: 30px;
+        }
         @media (max-width: $local-medium-down) {
           font-size: $fs-local-2;
         }
@@ -92,10 +104,6 @@ $local-medium-down: 780px;
         padding: 1.5%;
         box-sizing: border-box;
         visibility: hidden;
-        @media (max-width: $local-extra-large-max) {
-          width: calc(100% / 3);
-          padding: 1.6%;
-        }
 
         @media (max-width: $local-medium-down) {
           width: 100%;

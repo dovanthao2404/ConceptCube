@@ -27,6 +27,36 @@ export const afterLoad = (origin: any, destination: any, direction: any) => {
 
     } else if (destination.index === 1) {
 
+        gsap.from(".second-page .creative .first", {
+            autoAlpha: 0,
+            x: -400,
+            duration: 1,
+            ease: "power4.out",
+        });
+        gsap.from(".second-page .creative .fun", {
+            autoAlpha: 0,
+            x: 400,
+            duration: 1,
+            ease: "power4.out",
+        });
+        gsap.from(".second-page .creative .enjoyable", {
+            autoAlpha: 0,
+            x: -400,
+            duration: 1,
+            ease: "power4.out",
+        });
+        gsap.from(".second-page .creative .work", {
+            autoAlpha: 0,
+            x: 400,
+            duration: 1,
+            ease: "power4.out",
+        });
+        gsap.from(".second-page .creative .impressive", {
+            autoAlpha: 0,
+            x: -400,
+            duration: 1,
+            ease: "power4.out",
+        });
 
 
 
