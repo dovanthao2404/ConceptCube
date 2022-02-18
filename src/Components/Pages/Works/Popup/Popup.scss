@@ -197,6 +197,16 @@ $local-grey-0: #e7e7e7;
                     width: 380px;
                     margin: auto;
                 }
+                @media (max-width: 413.98px) {
+                    height: 28vh;
+                    width: 340px;
+                    margin: auto;
+                }
+                @media (max-width: 374.98px) {
+                    height: 30vh;
+                    width: 300px;
+                    margin: auto;
+                }
             }
             .main-design {
                 padding-top: 30px;
