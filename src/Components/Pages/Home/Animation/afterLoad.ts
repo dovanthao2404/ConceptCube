@@ -1,7 +1,6 @@
 import gsap from "gsap";
 
 export const afterLoad = (origin: any, destination: any, direction: any) => {
-    console.log(destination.index);
     if (destination.index === 0) {
 
         const TL = gsap.timeline();

@@ -9,7 +9,6 @@ const hiddenItem = (listEle: string[]) => {
 };
 
 export const onLeave = (a: any, destination: any, c: any) => {
-    console.log(destination.index);
     if (destination.index === 0) {
         const listEle: string[] = ['.first-title', ".first-page .logo", ".first-page .introduction", ".first-page .about"];
         hiddenItem(listEle);

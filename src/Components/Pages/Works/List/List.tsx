@@ -10,7 +10,7 @@ interface list {
 
 const List: React.FC<list> = ({ tab, handleOpen }) => {
     const { t } = useTranslation();
-    const [dataRender, setDataRender] = useState();
+
     const renderCard = (data: any) => {
 
         return data.map((item: any) => {
@@ -51,6 +51,8 @@ const List: React.FC<list> = ({ tab, handleOpen }) => {
                 });
             }
         }
+        const listEle = document.querySelector(".works .work-list") as any;
+        listEle.scrollTo(0, 0);
     }, [tab]);
 
 
