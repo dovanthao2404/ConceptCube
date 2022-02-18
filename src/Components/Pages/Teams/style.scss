@@ -57,15 +57,16 @@ $local-medium-down: 780px;
         font-size: $fs-local-1;
         font-family: "Montserrat";
         text-align: center;
-        margin-bottom: 50px;
         transition: all 0.2s;
         user-select: none;
         color: $color-white-0;
         cursor: text;
+        @include responsive("extra-large-down") {
+          font-size: $fs-local-5;
+        }
 
         @include responsive("large-down") {
           font-size: $fs-local-5;
-          margin-bottom: 30px;
         }
         @media (max-width: $local-medium-down) {
           font-size: $fs-local-2;
@@ -96,6 +97,9 @@ $local-medium-down: 780px;
       display: flex;
       flex-wrap: wrap;
       margin-top: 100px;
+      @include responsive("extra-large-down") {
+        margin-top: 40px;
+      }
       @media (max-width: $local-medium-down) {
         margin-top: 0;
       }
@@ -114,6 +118,9 @@ $local-medium-down: 780px;
           font-family: "Montserrat";
           margin-bottom: 35px;
           padding-left: 1.5%;
+          @include responsive("extra-large-down") {
+            margin-bottom: 15px;
+          }
         }
         ul > li {
           font-family: "Montserrat";
@@ -126,6 +133,9 @@ $local-medium-down: 780px;
           margin: 0;
           opacity: 1;
           transition: all 0.1s;
+          @include responsive("extra-large-down") {
+            height: 25px;
+          }
         }
       }
     }

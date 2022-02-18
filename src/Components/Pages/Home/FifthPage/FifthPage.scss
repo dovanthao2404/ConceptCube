@@ -15,6 +15,7 @@ $local-extra-large-max: 1680px;
     .fifth-item {
       margin-bottom: 65px;
       visibility: hidden;
+
       @include responsive("extra-large-down") {
         margin-bottom: 40px;
       }
@@ -25,7 +26,7 @@ $local-extra-large-max: 1680px;
         user-select: none;
         @include styleText($fs-14, $fw-3, $color-white-0);
 
-        @include responsive("medium-down") {
+        @include responsive("extra-large-down") {
           font-size: $fs-4;
         }
       }
@@ -88,7 +89,13 @@ $local-extra-large-max: 1680px;
       font-size: $fs-6;
     }
     @include responsive("extra-large-down") {
-      font-size: $fs-6;
+      font-size: $fs-5;
+      height: 100%;
+      top: 10%;
+      width: 400px;
+      left: 33%;
+      display: flex;
+      align-items: center;
     }
     @include responsive("medium-down") {
       height: 100%;

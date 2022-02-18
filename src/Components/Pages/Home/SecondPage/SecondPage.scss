@@ -48,8 +48,8 @@
       img {
         display: block;
         width: 526px;
-        @include responsive("large-down") {
-          width: 320px;
+        @include responsive("extra-large") {
+          width: 400px;
         }
         @include responsive("small-down") {
           width: 240px;

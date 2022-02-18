@@ -1,4 +1,7 @@
 @import "Assets/Styles/_index.scss";
+
+$local-extra-large: 1367px;
+
 .third-page {
   .container {
     max-width: 1580px;
@@ -30,7 +33,7 @@
         img {
           width: 100%;
           object-fit: cover;
-          @include responsive("small-down") {
+          @media (max-width: $local-extra-large) {
             display: none;
           }
         }

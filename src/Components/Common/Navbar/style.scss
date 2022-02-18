@@ -119,7 +119,7 @@ $local-fs-1: 29px;
     width: 532px;
     transform: translateX(532px);
     @include responsive("extra-large-down") {
-      width: 450px;
+      width: 400px;
       transform: translateX(450px);
     }
 
@@ -154,7 +154,7 @@ $local-fs-1: 29px;
     .list-link {
       padding: 150px 50px 50px 32px;
       height: 100%;
-      @include responsive("small-down") {
+      @include responsive("extra-large-down") {
         padding-top: 100px;
       }
 
@@ -202,7 +202,7 @@ $local-fs-1: 29px;
           .address {
             padding-top: 50px;
             padding-bottom: 30px;
-            @include responsive("medium-down") {
+            @include responsive("extra-large-down") {
               padding-bottom: 20px;
               padding-top: 30px;
             }
